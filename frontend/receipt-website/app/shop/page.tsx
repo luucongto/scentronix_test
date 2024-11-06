@@ -1,14 +1,8 @@
+import { shopItems } from '@/data'
 import { Box, Grid, Typography } from '@mui/material'
 import Link from 'next/link'
 import * as React from 'react'
 
-const shopItems = [
-  {
-    url: '/recipes/bread/quickBread',
-    image: '/recipes/banana-bread.jpg',
-    title: 'Whole-Grain Banana Bread',
-  },
-]
 const Shop: React.FC = () => {
   return (
     <>

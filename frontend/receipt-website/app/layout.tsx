@@ -1,9 +1,9 @@
-import { Container, CssBaseline } from '@mui/material'
+import { CssBaseline } from '@mui/material'
 import * as React from 'react'
 import { PropsWithChildren } from 'react'
 import CustomBreadcrumbs from '../components/Breadcrumbs'
 import Navbar from '../components/Navbar'
-
+import './globals.css'
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
@@ -15,8 +15,11 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <body>
         <CssBaseline />
         <Navbar />
-        <CustomBreadcrumbs />
-        <Container>{children}</Container>
+
+        <div style={{ marginRight: 50, marginLeft: 130 }}>
+          <CustomBreadcrumbs />
+          {children}
+        </div>
       </body>
     </html>
   )
